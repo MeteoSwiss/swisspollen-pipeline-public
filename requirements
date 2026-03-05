@@ -1,0 +1,24 @@
+## install as sudoer (only once system wide):
+#apt install libopencv-dev
+#ln -s /usr/include/opencv4/opencv2 /usr/include/opencv2
+    
+## Install trt (only once systemwide)
+#mkdir trt_engines
+#download deb for trt (only once system wide)
+
+
+## to the local project/environment: 
+
+# > install onnxruntime to working environment:
+wget https://github.com/microsoft/onnxruntime/releases/download/v1.24.2/onnxruntime-linux-x64-gpu-1.24.2.tgz
+tar -xzf onnxruntime-linux-x64-gpu-1.24.2.tgz
+rm onnxruntime-linux-x64-gpu-1.24.2.tgz
+
+# > install cudnn_9 to working environment:
+wget https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64/cudnn-linux-x86_64-9.19.1.2_cuda12-archive.tar.xz
+tar -xvf cudnn-linux-*.tar.xz
+rm cudnn-linux-*.tar.xz
+mv cudnn-linux-x86_64-9.19.1.2_cuda12-archive cudnn-9
+export CUDNN_PATH=/path/to/cudnn-9/lib
+export LD_LIBRARY_PATH=$CUDNN_PATH:/usr/local/cuda-12.5/lib64:$LD_LIBRARY_PATH
+
