@@ -1,7 +1,7 @@
 # swisspollen-pipeline
 refactored pollen inference pipeline in C++
 
-Ingests poleno raw data in zip format
+Ingests Swisens Poleno raw data in zip format
 
 This repository contains the first public snapshot
 of the refactored pollen pipeline. Development will continue
