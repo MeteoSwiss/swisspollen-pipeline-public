@@ -7,6 +7,8 @@ This repository contains the first public snapshot
 of the refactored pollen pipeline. Development will continue
 in this repository.
 
+The nlohmann JSON library (MIT license) is included to provide a ready-to-use example.
+
 
 # === usage ===
 Usage:
